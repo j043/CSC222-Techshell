@@ -1,4 +1,19 @@
 Names: Ashton Harrell, Jenny Wright, and Tia Ransom
+Project Desc:
+TechShell is a custom built command prompt program with basic shell implementation.
 
-Capabilities:
-char* CommandPrompt - pwd and return user input 
+Setup: 
+ShellCommand structure:
+- contains an array of strings called args[] which stores command line arguments
+- contains an int called argcount that keeps track of the number of arguments
+
+Function capabilities:
+CommandPrompt() 
+- display working directory and return user input
+- uses fgets to read user input and insert it into a string
+
+ParseCommandLine()
+- takes in input from CommandPrompt()
+- navigates the args[] array inside of the ShellCommand structure using a counter
+- while navigating, uses strtok() to split the input string into individual arguments
+- updates argcount with the counter value
